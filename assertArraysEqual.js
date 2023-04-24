@@ -1,4 +1,4 @@
-const assertArraysEqual = function(input, input2) {
+const eqArrays = function(input, input2) {
   var result = true;
   for (let i = 0; i < input.length; i++) {
     if (input[i] !== input2[i]) {
@@ -9,9 +9,14 @@ const assertArraysEqual = function(input, input2) {
       result = true;
     }
   }
-  if (result == true) {
-    return "arrays are equal";
+  return result;
+};
+
+const assertArraysEqual = function(input, input2) {
+  if (eqArrays(input, input2)) {
+    return `Arrays are the same: [${input}] === [${input2}]`;
   } else {
-    return "arrays are not equal";
+    return `Arrays are not the same: ${input} !== ${input2}]`;
   }
 };
+
