@@ -1,5 +1,5 @@
 const eqArrays = function(input, input2) {
-  var result = true;
+  let result = true;
   for (let i = 0; i < input.length; i++) {
     if (input[i] !== input2[i]) {
       result = false;
