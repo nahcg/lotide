@@ -1,13 +1,13 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`Assertion Passed: ${actual} === ${expected}`);
+    return `Assertion Passed: ${actual} === ${expected}`;
   } else {
-    console.log(`Assertion Failed: ${actual} !== ${expected}`);
+    return `Assertion Failed: ${actual} !== ${expected}`;
   }
 };
 
 const eqArrays = function(input, input2) {
-  var result = true;
+  let result = true;
   for (let i = 0; i < input.length; i++) {
     if (input[i] !== input2[i]) {
       result = false;
@@ -20,8 +20,8 @@ const eqArrays = function(input, input2) {
   return result;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays(['a', 'b', 'c'], ['a', 'b', 'c']), true);
-assertEqual(eqArrays([1, 2, 3], [1, 4, 3]), false);
-assertEqual(eqArrays(['1', 2, 3], [1, 2, 3]), false);
-assertEqual(eqArrays([1, 2, 3, 'thing'], [1, 2, 3, 'thing2']), false);
+console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
+console.log(assertEqual(eqArrays(['a', 'b', 'c'], ['a', 'b', 'c']), true));
+console.log(assertEqual(eqArrays([1, 2, 3], [1, 4, 3]), false));
+console.log(assertEqual(eqArrays(['1', 2, 3], [1, 2, 3]), false));
+console.log(assertEqual(eqArrays([1, 2, 3, 'thing'], [1, 2, 3, 'thing2']), false));
