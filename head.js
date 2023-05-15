@@ -1,4 +1,4 @@
-const head = function(input) {
+!const head = function(input) {
   return input.shift();
 }
 
