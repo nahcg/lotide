@@ -1,0 +1,26 @@
+{
+  "name": "@nahcg/lotide",
+  "version": "1.0.1",
+  "description": "A mini clone of the Lodash library",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nahcg/lotide.git"
+  },
+  "author": "Gloria Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nahcg/lotide/issues"
+  },
+  "homepage": "https://github.com/nahcg/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
+  }
+}
