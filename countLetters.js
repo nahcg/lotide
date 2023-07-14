@@ -6,6 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// counts occurance of each letter in a string and returns key value pairs in dictionary
 const countLetters = function(inputstring) {
   let dict = {};
   for (const s of inputstring) {
