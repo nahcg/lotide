@@ -1,3 +1,4 @@
+// finds key that matches given value in a nested key value pair
 const findKey = function(object, callback) {
   var keys = Object.keys(object);
   for (const k of keys) {
@@ -7,4 +8,5 @@ const findKey = function(object, callback) {
   }
 };
 
+// export function for testing
 module.exports = findKey;
