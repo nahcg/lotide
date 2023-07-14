@@ -1,3 +1,4 @@
+// eqArray function used to compare arrays
 const eqArrays = function(input, input2) {
   let result = true;
   for (let i = 0; i < input.length; i++) {
