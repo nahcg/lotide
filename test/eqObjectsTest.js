@@ -2,6 +2,7 @@ const assert = require('chai').assert;
 const eqObjects = require('../eqObjects');
 const eqArrays = require('../eqArrays');
 
+// use chai's deepEqual to compare objects
 describe("#eqObjects", () => {
   //same objects
   it("returns true for eqObjects({ color: 'red', size: 'medium' }, { size: 'medium', color: 'red' })", () => {

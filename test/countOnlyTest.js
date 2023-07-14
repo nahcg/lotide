@@ -1,3 +1,4 @@
+//require assert and countOnly function
 const assert = require('chai').assert;
 const countOnly = require('../countOnly');
 
@@ -15,6 +16,7 @@ const firstNames = [
   "Joe"
 ];
 
+//using chai's deepequal to compare objects
 describe("#countOnly", () => {
   it("returns {Jason: 1, Fang: 2} for countOnly(firstNames, { Jason: true, Karima: true, Fang: true, Agouhanna: false })", () => {
     assert.deepEqual(countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false }), {"Jason": 1, "Fang": 2});

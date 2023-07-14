@@ -8,6 +8,7 @@ const bestTVShowsByGenre = {
   reality: "The Circle"
 };
 
+//using chai's strictEqual to compare strings
 describe("#findKeyByValue", () => {
   it("returns 'drama' for 'The Wire'", () => {
     assert.strictEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama")
