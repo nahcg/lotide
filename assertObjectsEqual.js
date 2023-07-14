@@ -1,3 +1,4 @@
+// function that compares if two arrays are equal
 const eqArrays = function(input, input2) {
   let result = true;
   for (let i = 0; i < input.length; i++) {
@@ -12,6 +13,7 @@ const eqArrays = function(input, input2) {
   return result;
 };
 
+// function that compares if two objects are equal
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
@@ -39,6 +41,7 @@ const eqObjects = function(object1, object2) {
   }
 };
 
+// asserts if two objects are equal
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
@@ -48,8 +51,9 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-console.log(assertObjectsEqual({a: 'string', b: ['a', 2,'c']}, {a: 'string', b: ['a', 2, 'c']}))
+// tests for assertObjectEqual function
+console.log(assertObjectsEqual({a: 'string', b: ['a', 2,'c']}, {a: 'string', b: ['a', 2, 'c']}));
 
-console.log(assertObjectsEqual({a: 2, b: ['a', 2,'c']}, {a: 1, b: ['a', 2, 'c']}))
+console.log(assertObjectsEqual({a: 2, b: ['a', 2,'c']}, {a: 1, b: ['a', 2, 'c']}));
 
-console.log(assertObjectsEqual({a: 2, b: ['a', 2,'c']}, {a: 2, b: ['a', 2, 'd']}))
+console.log(assertObjectsEqual({a: 2, b: ['a', 2,'c']}, {a: 2, b: ['a', 2, 'd']}));
