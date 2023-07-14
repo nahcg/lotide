@@ -1,6 +1,7 @@
+// import eqArray function
 const eqArrays = require('./eqArrays');
 
-// Returns true if both objects have identical keys with identical values.
+// Returns true if both objects have identical keys with identical values utilizing eqArray function to compare array of keys
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
