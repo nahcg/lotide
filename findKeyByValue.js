@@ -1,3 +1,4 @@
+// finds key given value
 const findKeyByValue = function(someobject, valuetofind) {
   for (const key of Object.keys(someobject)) {
     if (someobject[key] === valuetofind) {
