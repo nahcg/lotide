@@ -1,4 +1,4 @@
-const eqArrays = function(input, input2) {
+const eqArrays = function (input, input2) {
   let result = true;
   for (let i = 0; i < input.length; i++) {
     if (input[i] !== input2[i]) {
@@ -12,7 +12,7 @@ const eqArrays = function(input, input2) {
   return result;
 };
 
-const assertArraysEqual = function(input, input2) {
+const assertArraysEqual = function (input, input2) {
   if (eqArrays(input, input2)) {
     return `Arrays are the same: [${input}] === [${input2}]`;
   } else {
@@ -20,10 +20,10 @@ const assertArraysEqual = function(input, input2) {
   }
 };
 
-const letterPositions = function(sentence) {
+const letterPositions = function (sentence) {
   const results = {};
   for (const index in sentence) {
-    if (sentence[index] !== ' ') {
+    if (sentence[index] !== " ") {
       if (sentence[index] in results) {
         results[sentence[index]].push(Number(index));
       } else {
@@ -46,3 +46,5 @@ console.log(assertArraysEqual(letterPositions("random word").d, [3, 10]));
 console.log(assertArraysEqual(letterPositions("random word").o, [4, 8]));
 console.log(assertArraysEqual(letterPositions("random word").m, [5]));
 console.log(assertArraysEqual(letterPositions("random word").w, [7]));
+
+module.exports = letterPositions;

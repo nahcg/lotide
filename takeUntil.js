@@ -1,4 +1,4 @@
-const eqArrays = function(input, input2) {
+const eqArrays = function (input, input2) {
   let result = true;
   for (let i = 0; i < input.length; i++) {
     if (input[i] !== input2[i]) {
@@ -12,7 +12,7 @@ const eqArrays = function(input, input2) {
   return result;
 };
 
-const assertArraysEqual = function(input, input2) {
+const assertArraysEqual = function (input, input2) {
   if (eqArrays(input, input2)) {
     return `Arrays are the same: [${input}] === [${input2}]`;
   } else {
@@ -20,7 +20,7 @@ const assertArraysEqual = function(input, input2) {
   }
 };
 
-const takeUntil = function(array, callback) {
+const takeUntil = function (array, callback) {
   let results = [];
   for (const i of array) {
     if (callback(i) !== true) {
@@ -34,8 +34,30 @@ const takeUntil = function(array, callback) {
 
 //[ 1, 2, 5, 7, 2 ]
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-console.log(assertArraysEqual(takeUntil(data1, x => x < 0), [ 1, 2, 5, 7, 2 ]))
+console.log(
+  assertArraysEqual(
+    takeUntil(data1, (x) => x < 0),
+    [1, 2, 5, 7, 2]
+  )
+);
 
 //[ 'I\'ve', 'been', 'to', 'Hollywood' ]
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-console.log(assertArraysEqual(takeUntil(data2, x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood' ]));
+const data2 = [
+  "I've",
+  "been",
+  "to",
+  "Hollywood",
+  ",",
+  "I've",
+  "been",
+  "to",
+  "Redwood",
+];
+console.log(
+  assertArraysEqual(
+    takeUntil(data2, (x) => x === ","),
+    ["I've", "been", "to", "Hollywood"]
+  )
+);
+
+module.exports = takeUntil;
