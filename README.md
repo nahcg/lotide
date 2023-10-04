@@ -18,12 +18,12 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Require it:**
 
-Type `node` into terminal to launch REPL
+Type `node` into terminal to launch REPL\
 `const _ = require('@nahcg/lotide');`
 
 **Call it:**
 
-`_.tail([1, 2, 3]) // => [2, 3]`
+`_.tail([1, 2, 3]) // => [2, 3]`\
 `_.middle([1, 2, 3, 4, 5, 6, 7]) // => [4]`
 
 ## Documentation
